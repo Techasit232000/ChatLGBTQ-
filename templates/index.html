@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChatLGBTQ+ | Inclusive AI Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main class="chat-shell" aria-labelledby="page-title">
+    <header class="chat-header">
+      <div>
+        <p class="eyebrow">A safe, supportive space</p>
+        <h1 id="page-title">ChatLGBTQ+</h1>
+        <p class="subtitle">An inclusive AI chatbot for questions, support, and conversation.</p>
+      </div>
+      <button id="reset-button" class="secondary-button" type="button">New chat</button>
+    </header>
+
+    <section id="messages" class="messages" aria-live="polite" aria-label="Conversation">
+      <div class="message assistant">
+        <span class="message-label">ChatLGBTQ+</span>
+        <p>Hi! I'm here to listen and help. What would you like to talk about?</p>
+      </div>
+    </section>
+
+    <form id="chat-form" class="composer">
+      <label class="sr-only" for="message-input">Type your message</label>
+      <textarea id="message-input" rows="2" maxlength="2000" placeholder="Type your message..." required></textarea>
+      <button class="send-button" type="submit">Send</button>
+    </form>
+    <p class="disclaimer">This chatbot is not a substitute for professional medical or crisis support.</p>
+  </main>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

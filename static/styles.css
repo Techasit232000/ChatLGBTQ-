@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  color: #241b35;
+  background: #f8f3ff;
+}
+
+body { margin: 0; min-height: 100vh; background: linear-gradient(135deg, #fff 0%, #f4eaff 100%); }
+.chat-shell { width: min(900px, 100%); min-height: 100vh; margin: auto; padding: 32px 20px 20px; display: flex; flex-direction: column; }
+.chat-header { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; padding-bottom: 24px; }
+.eyebrow { margin: 0 0 6px; color: #8b4eb7; font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; }
+h1 { margin: 0; font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1; }
+.subtitle { margin: 12px 0 0; color: #665c72; }
+.messages { flex: 1; min-height: 420px; max-height: 62vh; overflow-y: auto; padding: 24px 0; }
+.message { width: fit-content; max-width: 80%; margin: 12px 0; padding: 12px 16px; border-radius: 18px; box-shadow: 0 5px 20px #4d2d6812; }
+.message p { margin: 4px 0 0; line-height: 1.5; white-space: pre-wrap; }
+.message-label { font-size: .75rem; font-weight: 700; opacity: .75; }
+.message.assistant { background: #fff; border: 1px solid #eadcf3; }
+.message.user { margin-left: auto; color: #fff; background: #7542a5; }
+.composer { display: flex; gap: 10px; padding: 14px; background: #fff; border: 1px solid #eadcf3; border-radius: 18px; box-shadow: 0 8px 30px #4d2d6812; }
+textarea { flex: 1; resize: vertical; min-height: 48px; padding: 12px; border: 0; outline: 0; font: inherit; color: inherit; }
+button { border: 0; border-radius: 12px; padding: 10px 16px; font: inherit; font-weight: 700; cursor: pointer; }
+.send-button { align-self: flex-end; color: #fff; background: #7542a5; }
+.secondary-button { color: #7542a5; background: #eadcf3; }
+.disclaimer { margin: 12px 0 0; color: #766c80; font-size: .75rem; text-align: center; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 600px) { .chat-shell { padding: 24px 14px 14px; } .chat-header { flex-direction: column; } .secondary-button { align-self: flex-start; } .message { max-width: 92%; } }
